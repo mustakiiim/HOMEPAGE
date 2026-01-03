@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUET Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>RUET SMS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="btn-login" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">RUET Student Management System</h1>
+                <p class="hero-subtitle">A Modern OOP-based Platform for Academic Management</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="studentLoginBtn">
+                        <i class="fas fa-user-graduate"></i> Student Login
+                    </button>
+                    <button class="btn-secondary" id="teacherLoginBtn">
+                        <i class="fas fa-chalkboard-teacher"></i> Teacher Portal
+                    </button>
+                    <button class="btn-admin" id="adminLoginBtn">
+                        <i class="fas fa-user-shield"></i> Admin Panel
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <img src="https://cdn.dribbble.com/userupload/14508064/file/original-8932126e7da5ec5bf37a731ed788d490.jpg?format=webp&resize=540x290&vertical=center" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">System Features</h2>
+            <p class="section-subtitle">Built with Object-Oriented Programming Principles</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>User Management</h3>
+                    <p>Student, Teacher, and Admin roles with proper inheritance hierarchy.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">Classes</span>
+                        <span class="tech-tag">Inheritance</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Course Registration</h3>
+                    <p>Students can register for courses with validation and tracking.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">Encapsulation</span>
+                        <span class="tech-tag">File I/O</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Grade Management</h3>
+                    <p>Teachers can assign marks and calculate CGPA automatically.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">Polymorphism</span>
+                        <span class="tech-tag">Templates</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Persistence</h3>
+                    <p>CSV file storage for students, teachers, and course data.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">File Handling</span>
+                        <span class="tech-tag">Data Structures</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Diamond Problem Solved</h3>
+                    <p>Virtual inheritance implementation for Teaching Assistant class.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">Virtual Inheritance</span>
+                        <span class="tech-tag">Multiple Inheritance</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Statistics</h3>
+                    <p>Real-time tracking of users, logins, and system status.</p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">Static Members</span>
+                        <span class="tech-tag">Singleton Pattern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Live Demo</h2>
+            <p class="section-subtitle">Try the system with sample data</p>
+            
+            <div class="demo-container">
+                <div class="demo-login">
+                    <h3>Quick Login</h3>
+                    <p>Use these demo credentials to explore:</p>
+                    
+                    <div class="demo-credentials">
+                        <div class="credential-card student">
+                            <h4><i class="fas fa-user-graduate"></i> Student</h4>
+                            <p><strong>ID:</strong> 2310047</p>
+                            <p><strong>Name:</strong> Mustakim</p>
+                            <button class="btn-demo" id="demoStudentBtn">
+                                Login as Student
+                            </button>
+                        </div>
+                        
+                        <div class="credential-card teacher">
+                            <h4><i class="fas fa-chalkboard-teacher"></i> Teacher</h4>
+                            <p><strong>ID:</strong> 100</p>
+                            <p><strong>Name:</strong> Kim Jung</p>
+                            <button class="btn-demo" id="demoTeacherBtn">
+                                Login as Teacher
+                            </button>
+                        </div>
+                        
+                        <div class="credential-card admin">
+                            <h4><i class="fas fa-user-shield"></i> Admin</h4>
+                            <p><strong>ID:</strong> 999</p>
+                            <p><strong>Name:</strong> SuperAdmin</p>
+                            <button class="btn-demo" id="demoAdminBtn">
+                                Login as Admin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-features">
+                    <h3>Current System Status</h3>
+                    <div class="status-board">
+                        <div class="status-item">
+                            <div class="status-icon total-users">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="status-info">
+                                <h4>Total Users</h4>
+                                <p id="totalUsers">15</p>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-icon students">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="status-info">
+                                <h4>Students</h4>
+                                <p id="totalStudents">3</p>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-icon teachers">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="status-info">
+                                <h4>Teachers</h4>
+                                <p id="totalTeachers">1</p>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-icon courses">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="status-info">
+                                <h4>Courses</h4>
+                                <p>5 Active</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-action">
+                        <button class="btn-action" id="runConsoleBtn">
+                            <i class="fas fa-terminal"></i> Run Console Demo
+                        </button>
+                        <button class="btn-action" id="exportDataBtn">
+                            <i class="fas fa-download"></i> Export Sample Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">OOP Project Details</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Project Overview</h3>
+                    <p>This Student Management System demonstrates core Object-Oriented Programming concepts implemented in C++:</p>
+                    
+                    <ul class="oop-concepts">
+                        <li><strong>Classes & Objects:</strong> Student, Teacher, Admin, User base class</li>
+                        <li><strong>Inheritance:</strong> Hierarchical inheritance with User as base class</li>
+                        <li><strong>Polymorphism:</strong> Virtual functions and function overloading</li>
+                        <li><strong>Encapsulation:</strong> Private data members with public interfaces</li>
+                        <li><strong>Abstraction:</strong> Abstract User class as blueprint</li>
+                        <li><strong>Templates:</strong> Generic printList function</li>
+                        <li><strong>Exception Handling:</strong> Input validation with try-catch</li>
+                        <li><strong>File Handling:</strong> CSV data persistence</li>
+                        <li><strong>Diamond Problem:</strong> Solved using virtual inheritance</li>
+                        <li><strong>Static Members:</strong> System-wide user tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="about-code">
+                    <h3>Code Structure</h3>
+                    <div class="code-preview">
+                        <pre>
+// Abstract User Class
+class User {
+protected:
+    int id;
+    string name;
+public:
+    virtual void menu() = 0; // Pure virtual
+    virtual ~User() {}
+};
+
+// Student inherits from User
+class Student : public User {
+    vector&lt;int&gt; marks;
+public:
+    void registerCourse();
+    void viewGrades();
+    double cgpa();
+    void menu() override;
+};
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">For project inquiries or collaboration</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>University</h4>
+                            <p>RUET - Rajshahi University of Engineering & Technology</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Team</h4>
+                            <p>ECE'23 - Object Oriented Programming Course</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <h4>Technology Stack</h4>
+                            <p>C++ (Backend), HTML/CSS/JS (Frontend), CSV Data Storage</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="github-link">
+                    <h3>Project Repository</h3>
+                    <p>Explore the complete source code:</p>
+                    <a href="https://github.com" target="_blank" class="github-btn">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            
+            <div class="login-container">
+                <div class="login-header">
+                    <h2><i class="fas fa-sign-in-alt"></i> System Login</h2>
+                    <p>Select your role and enter credentials</p>
+                </div>
+                
+                <div class="role-selection">
+                    <button class="role-btn active" data-role="student">
+                        <i class="fas fa-user-graduate"></i> Student
+                    </button>
+                    <button class="role-btn" data-role="teacher">
+                        <i class="fas fa-chalkboard-teacher"></i> Teacher
+                    </button>
+                    <button class="role-btn" data-role="admin">
+                        <i class="fas fa-user-shield"></i> Admin
+                    </button>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="userId">
+                            <i class="fas fa-id-card"></i> User ID
+                        </label>
+                        <input type="number" id="userId" placeholder="Enter your ID" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label id="selectedRole">
+                            <i class="fas fa-user-tag"></i> Logging in as: <span>Student</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-login-submit">
+                        <i class="fas fa-sign-in-alt"></i> Login to System
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <p><i class="fas fa-info-circle"></i> Use demo credentials from the Demo section</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Dashboard Modal -->
+    <div id="studentDashboard" class="modal dashboard-modal">
+        <div class="modal-content dashboard-content">
+            <span class="close-modal" id="closeStudentDashboard">&times;</span>
+            <div class="dashboard-header">
+                <h2><i class="fas fa-user-graduate"></i> Student Dashboard</h2>
+                <div id="studentInfo"></div>
+            </div>
+            <div class="dashboard-body">
+                <div class="dashboard-actions">
+                    <button class="dashboard-btn" id="registerCoursesBtn">
+                        <i class="fas fa-book"></i> Register Courses
+                    </button>
+                    <button class="dashboard-btn" id="viewGradesBtn">
+                        <i class="fas fa-chart-bar"></i> View Grades
+                    </button>
+                    <button class="dashboard-btn" id="calculateCGPABtn">
+                        <i class="fas fa-calculator"></i> Calculate CGPA
+                    </button>
+                    <button class="dashboard-btn" id="viewProfileBtn">
+                        <i class="fas fa-user"></i> View Profile
+                    </button>
+                    <button class="dashboard-btn logout-btn" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+                <div id="dashboardContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher Dashboard Modal -->
+    <div id="teacherDashboard" class="modal dashboard-modal">
+        <div class="modal-content dashboard-content">
+            <span class="close-modal" id="closeTeacherDashboard">&times;</span>
+            <div class="dashboard-header">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Teacher Dashboard</h2>
+                <div id="teacherInfo"></div>
+            </div>
+            <div class="dashboard-body">
+                <div class="dashboard-actions">
+                    <button class="dashboard-btn" id="gradeStudentsBtn">
+                        <i class="fas fa-edit"></i> Grade Students
+                    </button>
+                    <button class="dashboard-btn" id="viewAllStudentsBtn">
+                        <i class="fas fa-list"></i> View All Students
+                    </button>
+                    <button class="dashboard-btn" id="updateProfileTeacherBtn">
+                        <i class="fas fa-user-edit"></i> Update Profile
+                    </button>
+                    <button class="dashboard-btn logout-btn" id="logoutTeacherBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+                <div id="teacherDashboardContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div id="adminDashboard" class="modal dashboard-modal">
+        <div class="modal-content dashboard-content">
+            <span class="close-modal" id="closeAdminDashboard">&times;</span>
+            <div class="dashboard-header">
+                <h2><i class="fas fa-user-shield"></i> Admin Dashboard</h2>
+                <div id="adminInfo"></div>
+            </div>
+            <div class="dashboard-body">
+                <div class="dashboard-actions">
+                    <button class="dashboard-btn" id="addStudentBtn">
+                        <i class="fas fa-user-plus"></i> Add Student
+                    </button>
+                    <button class="dashboard-btn" id="addTeacherBtn">
+                        <i class="fas fa-user-plus"></i> Add Teacher
+                    </button>
+                    <button class="dashboard-btn" id="viewAllDataBtn">
+                        <i class="fas fa-database"></i> View All Data
+                    </button>
+                    <button class="dashboard-btn" id="exportAllDataBtn">
+                        <i class="fas fa-download"></i> Export All Data
+                    </button>
+                    <button class="dashboard-btn logout-btn" id="logoutAdminBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+                <div id="adminDashboardContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grades Modal -->
+    <div id="gradesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeGradesModal">&times;</span>
+            <div id="gradesContent"></div>
+        </div>
+    </div>
+
+    <!-- Console Demo Modal -->
+    <div id="consoleModal" class="modal console-modal">
+        <div class="modal-content console-content">
+            <span class="close-modal" id="closeConsoleModal">&times;</span>
+            <div class="console-header">
+                <h3><i class="fas fa-terminal"></i> C++ Console Simulation</h3>
+            </div>
+            <div class="console-output" id="consoleOutput">
+                <div class="console-line">=== RUET Student Management System ===</div>
+                <div class="console-line">Loading system data...</div>
+            </div>
+            <div class="console-input">
+                <span class="prompt">></span>
+                <input type="text" id="consoleInput" placeholder="Type 'help' for commands...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>RUET SMS</h3>
+                    <p>Object Oriented Programming Project</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#about">About</a>
+                </div>
+                
+                <div class="footer-tech">
+                    <h4>Technologies</h4>
+                    <span>C++</span>
+                    <span>OOP</span>
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 RUET Student Management System. ECE - OOP Course Project.</p>
+                <p>This is a demonstration website for academic purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
